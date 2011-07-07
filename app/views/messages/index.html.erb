@@ -1,0 +1,11 @@
+<p>Chat Application for Acenet</p>
+
+<ul id="chat">
+  <%= render @messages %>
+</ul>
+<div align="center">
+<%= form_for Message.new, :remote => true do |f| %>
+  <%= f.text_field :content %>
+  <%= f.submit "Enter" %>
+<% end %>
+</div>

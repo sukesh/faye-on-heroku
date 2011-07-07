@@ -1,0 +1,8 @@
+<li>
+<%if message.created_at>=Time.now-60%>
+  <span class="created_at"><%=message.created_at.strftime("at %I:%M%p")%></span>
+<%=@user%>  
+<%= message.content %>
+<%else%>
+<%end%>
+</li>
